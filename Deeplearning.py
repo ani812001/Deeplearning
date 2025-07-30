@@ -97,3 +97,12 @@ plt.show()
 
 _______________________________________________________________________________
 
+bottom_right_corner = train_images[:,14:, 14:]
+plt.imshow(bottom_right_corner[0], cmap=plt.cm.binary)
+plt.show()
+
+_________________________________________________________________________________
+center_patches = train_images[:, 7:-7, 7:-7]
+plt.imshow(center_patches[0], cmap=plt.cm.binary)
+plt.show()
+
