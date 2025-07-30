@@ -58,3 +58,23 @@ print ("Multiplication:\n" , tf.multiply(a,b))
 print ("Division:\n" , tf.divide(a,b))
 ____________________________________________________________
 
+#3D array
+
+
+import numpy as np
+
+x = np.array([[[5, 78, 2, 34, 0],
+               [6, 79, 3, 35, 1],
+               [7, 80, 4, 36, 2]],
+
+              [[8, 81, 5, 37, 3],
+               [9, 82, 6, 38, 4],
+               [10, 83, 7, 39, 5]]])
+
+print(x)
+print(x.ndim)   # Should output 3
+print(x.shape)  # Should output (2, 3, 5)
+# x is 3 Dimensional
+
+____________________________________________________________________________
+
