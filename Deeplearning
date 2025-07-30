@@ -43,3 +43,18 @@ print(x.shape)
 
 -------------------------------------------------------
 
+
+import tensorflow as tf
+
+#creating a constant
+a = tf.constant([[1,2] , [3,4]], dtype=tf.int32)
+b = tf.constant([[5,6] , [7,8]], dtype=tf.int32)
+
+____________________________________________________________
+
+print ("Addition:\n" , tf.add(a,b))
+print ("Subtraction:\n" , tf.subtract(a,b))
+print ("Multiplication:\n" , tf.multiply(a,b))
+print ("Division:\n" , tf.divide(a,b))
+____________________________________________________________
+
