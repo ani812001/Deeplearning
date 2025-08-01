@@ -129,4 +129,20 @@ print("Feature matrix (x_test):", x_test.shape)
 print("Target vector (y_test):", y_test.shape)
 ________________________________________________________________________
 
+fig, ax = plt.subplots(10,10)
+k = 0
+
+for i in range(10):
+  for j in range(10):
+    ax[i][j].imshow(
+        x_train[k].reshape(28,28),
+        aspect='auto'
+        )
+    k += 1
+plt.show()
+
+__________________________________________________________________
+
+
+
 
