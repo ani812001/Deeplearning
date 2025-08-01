@@ -142,6 +142,30 @@ for i in range(10):
 plt.show()
 
 __________________________________________________________________
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Flatten, Input
+
+model = Sequential([
+Input(shape=(28, 28)),
+Flatten(),
+Dense(256, activation='sigmoid'),
+Dense(128, activation='sigmoid'),
+Dense(10, activation='softmax')
+])
+
+_____________________________________________________________________
+
+
+mod = model.fit(x_train, y_train, epochs=10, batch_size=2000, validation_split=0.2)
+_______________________________________________________________________________________________
+
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+mod = model.fit(x_train, y_train, epochs=5, batch_size=128)
+
+_____________________________________________________________________________________________
 
 
 
