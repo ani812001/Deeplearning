@@ -118,5 +118,15 @@ from tensorflow.keras.layers import Dense, Flatten
 
 _________________________________________________________________________________________
 
+gray_scale = 255
+
+x_train = x_train.astype('float32') 
+x_test = x_test.astype('float32') 
+
+print("Feature matrix (x_train):", x_train.shape)
+print("Target vector (y_train):", y_train.shape)
+print("Feature matrix (x_test):", x_test.shape)
+print("Target vector (y_test):", y_test.shape)
+________________________________________________________________________
 
 
