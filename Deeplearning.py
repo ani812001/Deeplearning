@@ -106,3 +106,17 @@ center_patches = train_images[:, 7:-7, 7:-7]
 plt.imshow(center_patches[0], cmap=plt.cm.binary)
 plt.show()
 
+_____________________________________________________________________________________
+
+import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Flatten
+
+(x_train, y_train) , (x_test, y_test) = tf.keras.datasets.mnist.load_data()
+
+_________________________________________________________________________________________
+
+
+
