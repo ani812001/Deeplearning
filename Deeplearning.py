@@ -170,7 +170,30 @@ ________________________________________________________________________________
 result= model.evaluate(x_test,y_test, verbose=0)
 print('Test loss','Test accuracy')
 print(result)
+______________________________________________________________
 
+plt.figure(figsize=(12,5))
 
+plt.subplot(1,2,1)
+plt.plot(mod.history['accuracy'], label='Training Accuracy', color='blue')
+plt.plot(mod.history['val_accuracy'], label='Validation Accuracy', color='orange')
+plt.title('Training and Validation Accuracy', fontsize=14)
+plt.xlabel('Epochs', fontsize=12)
+plt.ylabel('Accuracy', fontsize =12)
+plt.legend()
+plt.grid(True)
 
+plt.subplot(1,2,2)
+plt.plot(mod.history['loss'], label='Training Loss', color='blue')
+plt.plot(mod.history['val_loss'], label='Validation Loss', color='orange')
+plt.title('Training and Validation Loss', fontsize=14)
+plt.xlabel('Epochs', fontsize=12)
+plt.ylabel('Loss', fontsize=12)
+plt.legend()
+plt.grid(True)
+
+plt.tight_layout()
+plt.show()
+
+_______________________________________________________________________________________________________________
 
