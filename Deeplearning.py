@@ -167,6 +167,10 @@ mod = model.fit(x_train, y_train, epochs=5, batch_size=128)
 
 _____________________________________________________________________________________________
 
+result= model.evaluate(x_test,y_test, verbose=0)
+print('Test loss','Test accuracy')
+print(result)
+
 
 
 
