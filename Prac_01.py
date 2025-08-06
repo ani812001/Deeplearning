@@ -79,3 +79,51 @@ print("y_train shape:", y_train.shape)
 print("X_test shape:", X_test.shape)
 print("y_test shape:", y_test.shape)
 _______________________________________________________
+
+
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import StandardScaler, MinMaxScaler,LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.impute import SimpleImputer
+
+data = {
+    'Age': [25, 30, np.nan, 22, 35],
+    'Income': [50000, 60000, 55000, np.nan, 70000],
+    'Gender': ['M', 'F', 'M', 'F', 'M'],
+    'Purchased': ['Yes', 'No', 'Yes', 'No', 'Yes']
+}
+
+df = pd.DataFrame(data)
+print("Orignal Data:")
+print(df)
+
+#MISSING VALUES
+imputer = SimpleImputer(strategy='mean')
+df[['Age', 'Income']] = imputer.fit_transform(df[['Age', 'Income']])
+print("\nData After Imputation:")
+print(df)
+
+#eNCODING
+le  = LabelEncoder()
+df['Gender'] = le.fit_transform(df['Gender'])
+print("\nData After Label Encoding:")
+print(df)
+
+
+#One hit encoding
+df = pd.get_dummies(df, columns=['Gender'])
+print("\nData After One-Hot Encoding:")
+print(df)
+
+#min - max scaling
+min_max_scaler = MinMaxScaler()
+df[['Age', 'Income']] = min_max_scaler.fit_transform(df[['Age', 'Income']])
+print("\nData After Min-Max Scaling:")
+print(df) 
+
+
+scaler = StandardScaler()
+df[['Age', 'Income']] = scaler.fit_transform(df[['Age', 'Income']])
+print("\nData After Standard Scaling:")
+print(df)
