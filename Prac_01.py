@@ -13,3 +13,6 @@ ________________________________________________________________________________
 my_slice = train_images[10:100, 2:28 , 0:28]
 print(my_slice.shape) # select the tenth image from the dataset of 60K Image
 ______________________________________________________________________________________________
+my_slice = train_images[10:100, : , :]
+print(my_slice.shape) # select the tenth image from the dataset of 60K Image
+_________________________________________________________________________________________________
