@@ -62,3 +62,20 @@ ________________________________________________________________________________
 x.transpose()
 
 _____________________________________________________________________________________
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from tensorflow.keras.utils import to_categorical
+_______________________________________________________________________________________________
+
+from pickle import load
+iris = load_iris()
+x = iris.data
+y = iris.target
+
+_____________________________________________________________________________________________
+print("X_train shape:", X_train.shape)
+print("y_train shape:", y_train.shape)
+print("X_test shape:", X_test.shape)
+print("y_test shape:", y_test.shape)
+_______________________________________________________
