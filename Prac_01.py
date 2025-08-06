@@ -127,3 +127,11 @@ scaler = StandardScaler()
 df[['Age', 'Income']] = scaler.fit_transform(df[['Age', 'Income']])
 print("\nData After Standard Scaling:")
 print(df)
+
+___________________________________________________________________________________________________________
+scaler = StandardScaler()
+df[['Age', 'Income']] = scaler.fit_transform(df[['Age', 'Income']])
+print("\nData After Standard Scaling:")
+print(df)
+____________________________________________________________________________________________________________
+
