@@ -139,3 +139,11 @@ print("\nOne-Hot Encoded Labels:")
 print(y_encoded)
 ________________________________________________________________________________________________________
 
+x_train, x_test, y_train, y_test = train_test_split(x, y_encoded, test_size=0.2, random_state=42)
+print("\nTrain-Test Split:")
+print("X_train shape:", x_train.shape)
+print("y_train shape:", y_train.shape)
+print("X_test shape:", x_test.shape)
+_______________________________________________________________________________________________________________________
+
+
