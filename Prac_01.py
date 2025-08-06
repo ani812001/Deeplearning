@@ -134,4 +134,8 @@ df[['Age', 'Income']] = scaler.fit_transform(df[['Age', 'Income']])
 print("\nData After Standard Scaling:")
 print(df)
 ____________________________________________________________________________________________________________
+y_encoded = to_categorical(y)
+print("\nOne-Hot Encoded Labels:")
+print(y_encoded)
+________________________________________________________________________________________________________
 
